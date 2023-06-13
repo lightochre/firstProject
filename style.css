@@ -1,0 +1,372 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, picture 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  color:#333;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* header */
+header {
+  width:100%; 
+  z-index: 100;
+  position:fixed; 
+  display:flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding:10px 15px;
+  transition: background-color 0.6s;
+}
+
+header.active {background-color:#fff; border-bottom:1px solid #333;}
+header.active .logo {background:url(./img/logo_dark.png) no-repeat;}
+header.active ul.menu li a {color:#333; }
+header.active ul.subMenu li a {color:#333;}
+header.active .subMenuArea svg {fill:#004677;}
+
+header:hover {background-color: #fff;}
+header:hover .logo {background:url(./img/logo_dark.png) no-repeat;}
+header:hover ul.menu li a {color:#333; font-weight:500;}
+header:hover ul.subMenu li a {color:#333;}
+header:hover .subMenuArea svg {fill:#004677;}
+
+header .logo {width:171px; height:56px; margin-left:10px; background:url(./img/logo-white.png) no-repeat;text-indent: -9999em;}
+ul.menu {width: 450px; display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center;}
+  ul.menu li {font-weight: 500;}
+  ul.menu li a, ul.subMenu li a {color:#fff;}
+  ul.menu li a:hover, ul.subMenu li a:hover {color:#333;}
+
+  .subMenuArea {width: 385px; display:flex; justify-content: space-between; align-items: center;}
+  .subMenuArea button { width:140px; height:45px; background-color: rgb(7 89 133); text-align: center; font-weight: 700; font-size:15px; color:#fff;}
+  .subMenuArea svg {width: 20px; height: 20px; fill: #fff; cursor: pointer;}
+  .subMenuArea .barSvg svg {opacity: 0;}
+  
+  ul.subMenu {width:150px; display:flex; justify-content:space-between;}
+  ul.subMenu li {font-size:13px; font-weight:300;}
+
+  /* main - section */
+  .slider { width:100%;}
+  .slider-container {position:relative; width:100%;  height:100vh; overflow: hidden;}
+  .mslider-list, .mcontents {display:none;} 
+
+    .slider-list {
+      position: absolute;
+      width:100%; height:100vh;
+      overflow:hidden;
+     }
+    .slider-list li.slide {
+      height:100vh; width:100%;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:center top;
+      transition: all .5s ease-in;
+  
+    }
+    .slider-list li .slide1 {width:100%; height:100vh; background-image: url('./img/mainslide_01.jpg');}
+    .slider-list li .slide2 {width:100%; height:100vh; background-image: url('./img/mainslide_02.jpg'); background-size: cover;}
+    .slider-list li .slide3 {width:100%; height:100vh; background-image: url('./img/mainslide_03.jpg');}
+
+    .slider-list li .contents {
+      width:90%; 
+      color:#fff;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: absolute;
+      left:5%; top:80%;
+      transform: translate(0, -80%);
+    }
+    ul.slider-list li .contents h2, ul.slider-list li .contents p {color:#fff;}
+    ul.slider-list li .contents h2 {width:550px; font-size:50px; font-weight:700; line-height:1.3;}
+    ul.slider-list li .contents p {margin-top:15px; font-size:20px; font-weight:500;  line-height:1.6;}
+    ul.slider-list li button {width:600px; height:60px; margin-left:40px; background-color: #fff; color:#004677; font-size:16px; font-weight:600;}
+    ul.slider-list li button:hover {border:3px solid #fff; background-color: #000; color:#fff;}
+
+    .sliderDot {position:absolute; bottom:20px; width:100%; text-align:center;}
+    .dot {display:inline-block; width:10px; height:10px; background-color:#fff; border-radius: 50%; opacity: 0.5;}
+    .active {opacity: 1;}
+
+
+
+.step2 {
+  position: relative;
+  padding:180px 0 200px 0;
+  background: linear-gradient(to bottom, #fff, #fff 40%, transparent), url('https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:50; 
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .containerTxt {width:735px; margin-top:-100px; text-align:center;}
+  .containerTxt h2 {font-size:40px; font-weight:500; line-height: 1.5;}
+  .containerTxt p {margin-top:20px; font-size:19px; line-height:1.7;}
+
+  .containerStep, .containerStep2 {width:1100px; margin-top:30px; display: flex; }
+    dl.step22{margin-right:30px; position: relative;}
+    dl.step22:last-child {margin-right:0;}
+    dl.step22 dt {float:left; width:350px; font-size:100px; font-weight:500; line-height:1.0; text-align:center;}
+    dl.step22 dt svg {position:absolute; top:0; right:70px; width:30px; height:30px;}
+    dl.step22 dt span {display:block; margin-top:10px; color:#333; font-size:20px; font-weight:600;}
+    dl.step22 dd {float:left; padding-top:30px; text-align:center;}
+
+.step3 {
+  position: relative;
+  padding-top:50px;
+  display: flex; 
+  flex-direction: column; 
+}
+  .containerStep3 {width:995px; margin-left:50px;}
+  .containerStep3 h2 {font-size:20px; font-weight:600;}
+  .containerStep3 p {margin-top:30px; font-size:35px;}
+  
+  .slides {
+    width:100%;
+    height:500px;
+    margin-top:50px; 
+    position: relative; 
+    overflow: hidden;
+  }
+    ul.mgallery {display:none;}
+    ul.gallery {position: absolute; left:0; top:0; margin-top:30px;display:flex;}
+    ul.gallery li {width:350px; height:350px; cursor: pointer; transition: left 0.5s ease-out;}
+    ul.gallery li img {width:350px; height:400px; object-fit: cover;}
+    ul.gallery li img:hover {transform: scale(1.2, 1.2); box-shadow: 10px 10px 13px  #373737;}
+
+    .stepButton {margin-left:80px; margin-bottom:50px;}
+    .stepButton button {margin-right:10px; padding:15px; background-color: rgba(0,0,0, 0.5);}
+    .stepButton button:hover {background-color:#004677;}
+    .stepButton button svg {width:30px; height:20px; fill: #fff;}
+
+.step4 {
+  width: 1168px;
+  padding-bottom:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  }
+
+  .ourLine {
+    width: 100%;
+    margin-bottom:40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+ .ourLine span {display: inline-block; font-size:14px; font-weight:600;}
+ .ourLine span.left, .ourLine span.right {width:45%; border-bottom: 1px solid #333;}
+
+ .pictureArea {
+  width: 96%; height: 630px;
+  margin-bottom:20px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  background: linear-gradient(to top, #fff, #000 0%, transparent), url(https://npf-prod.imgix.net/uploads/ocmulgee-nps-photo-2128640E-1DD8-B71B-0B451F8028613187Original.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=900&q=80&w=1600);
+  background-repeat: no-repeat;
+  background-size: cover;      
+ }
+ .pictureArea .txt {position: absolute; bottom:20px; width:70%;}
+ .pictureArea .txt p, .pictureArea .txt p span  {color:#fff; text-align: center;}
+ .pictureArea .txt p span {display:block;  padding-bottom: 20px; font-size: 47px; line-height: 1.3;}
+
+  dl.step23{margin-right:30px; position: relative; width:33%;}
+  dl.step23:last-child {margin-right:0;}
+  dl.step23 dt {float:left; width:350px;}
+  dl.step23 dd {float:left; padding-top:30px; text-align:center;}
+  dl.step23 dd.step44 {text-align: left;}
+  dl.step23 dd span {display:block;}
+  dl.step23 dd span.small {font-size:13px; font-weight:600;}
+  dl.step23 dd span.big {padding:5px 0 10px 0;font-size:25px; font-weight:600;}
+  dl.step23 dd span.big a:hover  {color:#2280c3;} 
+
+ footer {width:100%; padding:50px 0 100px 100px; background-color:#f2f2f2;
+  font-size:16px;}
+
+  .mHidden {display:none;}
+
+
+@media screen and (max-width:1020px){
+  header {
+    padding:8px 8px;
+    position:fixed;
+    background-color:#fff;
+    border-bottom:1px solid #333;
+  }
+
+  header .logo {background:url(./img/logo_dark.png) no-repeat; width:70%;}
+  header ul.menu li a {color:#333; font-weight:500;}
+  header ul.subMenu li a {color:#333;}
+  header .subMenuArea svg {fill:#004677;}
+
+  ul.menu, ul.subMenu {display:none;}
+  .subMenuArea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .subMenuArea svg {margin-left:25px; margin-right:20px;}
+  .subMenuArea .barSvg svg {width:30px; height:30px; opacity: 1;}  
+
+  #mMenu {
+    width:100%; height:100vh;
+    background-color:#fff;
+    z-index:100;
+    position: absolute;
+    top:73px; left:0;
+  }
+  .mHidden {display:none;}
+  ul.mMenuList {padding:30px 20px;}
+  ul.mMenuList li {
+    line-height:2.5; 
+    font-size: 35px; 
+    font-weight:500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  ul.mMenuList li a:hover, ul.mMenuSub li a:hover {color:#0765a9;}
+  ul.mMenuList li svg {width:18px; height:18px; fill:#333;}
+
+  ul.mMenuSub {width:95%; margin:0 auto; padding-top:20px; border-top:1px solid #ddd;}
+  ul.mMenuSub li {font-size:20px; font-weight:400; line-height:2.0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #slider-container {display:none;}
+  ul.slider-list li .contents h2 {font-size:35px;}
+  ul.slider-list li .contents p {font-size:15px;}
+  ul.slider-list li button {width:550px; height:40px; margin-left:40px; font-size:12px; font-weight:600;}
+
+.containerStep {width:55%; margin-top:20px; display: flex; flex-direction: column;}
+  dl.step22 {margin-right:0; display: flex; flex-direction: column; align-items: center;}
+
+.containerStep3 {width:90%;}
+.containerStep3 h2 {font-size:15px;}
+.containerStep3 p {margin-top:25px; font-size:30px;}
+
+.step4 {width: 97%;}
+.pictureArea .txt {position: absolute; bottom:20px; width:90%;}
+.pictureArea .txt p span {display:block;  padding-bottom: 20px; font-size: 35px; line-height: 1.3;}
+
+.containerStep2 {width:97%; display:flex;}  
+  dl.step23{margin-right:20px;}
+  dl.step23 dt {float:left; width:100%; height:180px;}
+  dl.step23 dt img {width:100%; height:100%; background-size: cover;}
+
+  footer {width:100%; padding:50px 0 100px 50px; background-color:#f2f2f2; font-size:14px;}
+}
+
+@media screen and (max-width:640px){
+
+  header {padding:5px 5px;}
+  header .logo {height:45px;background:url(./img/logo_dark.png) no-repeat; background-size: 70%;}
+  header:hover .logo {background:url(./img/logo_dark.png) no-repeat; background-size: 70%;}
+  header ul.menu li a {color:#333;}
+  header ul.subMenu li a {color:#333;}
+  header .subMenuArea svg {fill:#004677;} 
+
+  .slider-container {display:none;}
+
+  #mMenu {top:105px;}
+  ul.mMenuSub {padding-right:10px;}
+  ul.mMenuList li svg {font-weight:400;}
+  .mHidden {display:none;}
+
+  .subMenuArea button { width:100%; height:50px; font-size:12px; display:block; background-color: rgb(17, 42, 110);}
+  .subMenuArea svg {width: 15px; height: 15px; margin-left:15px; margin-right:10px;}
+  .mbtnArea {position: absolute; top: 55px; left: 0px; width: 100%;}
+
+  .mslider-list {
+    width:100%; height:370px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center top 80px;
+    background-image: url('https://npf-prod.imgix.net/uploads/92e52a0b205e43b28f0fad900144da2e.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=1334&q=80&w=2125');
+  }
+  .slider-list {display:none;}
+
+  .mslider-list h2 {width:75%; margin-bottom:20px; text-align:center; font-size:30px; color:#fff;}
+
+  .mcontents {
+    width:100%; min-height:265px; 
+    background: #f6f6f6;
+    padding-top:30px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;}
+  .mcontents p {width:95%; padding-left:10px; font-size:16px; line-height:1.7; text-align:center;}
+  .mcontents button {margin-top:20px; padding:10px 20px;  background-color: rgb(17, 42, 110); text-align: center; font-weight: 500; font-size:13px; color:#fff;}
+  .mcontents button:hover {opacity: 0.8;}
+
+  .step2 {
+    padding:100px 0 70px 0;
+    background: linear-gradient(to bottom, #fff, #fff 50%, transparent), url('https://npf-prod.imgix.net/uploads/d0df4241fe0b426980b2ae0c0102e9fa.jpg');
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .containerTxt {width:100%;  padding: 30px 15px 0 15px;}
+  .containerTxt h2 {font-size:30px; font-weight: 600; line-height: 1.5;}
+  .containerTxt p {margin-top: 10px;font-size: 15px;}
+
+  .containerStep {width:98%;}
+    dl.step22{margin-top:20px;}
+    dl.step22:last-child {margin-right:0;}
+    dl.step22 dt {font-size:60px; font-weight:500; line-height:1.0; text-align:center;}
+    dl.step22 dt span {display:block; margin-top:10px; color:#333; font-size:13px; font-weight:600;}
+    dl.step22 dd {float:left; padding-top:20px; text-align:center;}
+
+  .containerStep3 {width:100%; margin-left:0;}
+  .containerStep3 h2 {font-size:25px; text-align:center;}
+  .containerStep3 p {margin-top:0; padding:20px 30px; font-size:16px; text-align:center;}
+
+  .slides {margin-top:15px; height:0; position:relative; overflow: visible;}
+  ul.gallery {display:none;}
+  ul.mgallery {
+    margin-top: 0; 
+    width: 100%; 
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  ul.mgallery li {width:50%; height:220px; display:flex; justify-content: center;}
+  ul.mgallery li img {width:200px; height:200px; object-fit: cover; border-radius: 50%;}
+  ul.mgallery li img:hover {transform: none; box-shadow: none;}
+
+  .stepButton {display:none;}
+
+  .ourLine span.left, .ourLine span.right {width:40%;}
+  .pictureArea {height:350px;}
+  .pictureArea .txt p span {font-size:25px;}
+ 
+  .containerStep2 {width:97%; display:flex; flex-direction: column; flex-wrap: nowrap;}
+  dl.step23{width:100%; margin-top:35px;}
+  dl.step23:first-child {margin-top:0;}
+  dl.step23 dt {width:100%; height:300px;}
+  dl.step23 dd {padding-top:20px; text-align:left;}
+}
+
